@@ -826,8 +826,6 @@ Currently Polling only support for legacy delegates, not for immutable by defaul
 
 The Kubernetes manifest has a component called upgrader. The upgrader is a cron job that runs every hour. Every time it runs, it makes a call to Harness Manager to determine which delegate version is published for the account. The cronjob is required for Auto upgrade flow.
 
-#### How can we disable cron job?
-
 If you need auto upgrade to be disabled they can perform operations: First run the following command to suspend auto-upgrade on the installed image: `kubectl patch cronjobs <job-name> -p '{"spec" : {"suspend" : true }}' -n <namespace>` Secondly in the delegate manifest, locate the CronJob resource. In the resource spec, set the suspend field to true: `spec: --suspend: true` .
 
 #### When do we have Services and Environments available at Org and Account Level in SMP?
