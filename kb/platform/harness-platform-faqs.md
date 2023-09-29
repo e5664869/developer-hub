@@ -820,8 +820,6 @@ Currently Polling only support for legacy delegates, not for immutable by defaul
 
 `Delegate Identifier=DETECTING` is auto upgrade which can be on or off, for more details you can refer here [Documentation](https://developer.harness.io/docs/platform/delegates/install-delegates/delegate-upgrades-and-expiration/#determine-if-automatic-upgrade-is-enabled).
 
-#### What is cron job in k8s manifest and why it is need
-
 The Kubernetes manifest has a component called upgrader. The upgrader is a cron job that runs every hour. Every time it runs, it makes a call to Harness Manager to determine which delegate version is published for the account. The cronjob is required for Auto upgrade flow.
 
 #### How can we disable cron job?
