@@ -110,4 +110,12 @@ To install the Docker delegate using Podman, do the following:
    -e MANAGER_HOST_AND_PORT=https://app.harness.io harness/delegate:23.07.79904
    ```
 
-7. Run the command.
+   Proxy parameters:
+  -e PROXY_HOST="localhost.prod.com" \
+  -e PROXY_PORT="8080" \
+  -e PROXY_SCHEME="http"
+  -e PROXY_MANAGER="true" \
+  -e HTTPS_PROXY="http://localhost.prod.com:8080" \
+  -e NO_PROXY="prod.com,apac.com" \ 
+
+8. Run the command.
